@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link, Route, Routes } from 'react-router-dom';
+import Adduser from './Components/Adduser/Adduser';
+import Home from './Components/Home/Home';
+import Navbar from './Components/Navbar/Navbar';
+import NotFound from './Components/NotFound/NotFound';
+import Showuser from './Components/Showuser/Showuser';
+import UpdateUser from './Components/UpdateUser/UpdateUser';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App ">
+      <Navbar></Navbar>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='adduser' element={<Adduser />} />
+        <Route path='showuser' element={<Showuser />} />
+        <Route path='userUpdate/:userid' element={<UpdateUser />} />
+        {/* <Route path='userUpdate' element={<UpdateUser />} /> */}
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+      <Link></Link>
+
     </div>
   );
 }
