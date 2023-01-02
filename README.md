@@ -5,7 +5,7 @@
 
 
 ## 🔗Live Site 👇  
-[Live Site : ] (https://bd-mart-redux.web.app/)
+[Live Site : ] (https://react-crud-operation-bd.netlify.app/)
 
  ## 🔗Server Site 👇  
 [MockAPI Site : ] (https://63ac4337da81ba97617eebed.mockapi.io/Crud_Operation)
